@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --background:#121316;
+  --background-variant:#181a1e;
+  --gray-border:solid 0.5px rgba(108, 108, 108,0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  border: 0;
+  outline: 0;
+}
+
+body{
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right,blueviolet,blue);
+  padding-bottom: 8rem;
+}
+
+input{
+  background:transparent;
+  color:white;
+}
+
+.flex{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  padding: 1rem;
+  background:var(--background-variant);
+  border-radius: 4px;
+  color:white;
+  width: 100%;
+  max-width: 750px;
+  margin-top: 1rem;
+}
+
+.top__container{
+  margin: 1rem 0;
+  justify-content: flex-start;
+}
+
+.search__bar{
+  background:var(--background);
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 40px;
+  padding: 0 1rem;
+  border: var(--gray-border);
+  border-radius: 4px;
+}
+
+
+.content__container{
+  margin-top: 1rem;
+  background:var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  border: var(--gray-border);
+  overflow-x: auto;
+}
+.user__table{
+  width:100%;
+  border-collapse: collapse;
+}
+
+tr{
+  border-radius: 4px;
+}
+th,td{
+  padding: 0.5rem;
+}
+
+.tr__variant{
+  background:var(--background-variant);
+  border: var(--gray-border);
+}
+
+
+/* Pagination */
+.pagination{
+  margin-top:1rem;
+}
+.pagination li,.pagination a,.pagination span{
+  color: white !important;
+}
+.pagination .ant-pagination-item-active{
+  background: transparent !important;
+} 
+.pagination .ant-select-selector{
+  background: transparent !important;
+}
+.pagination .ant-pagination-options-quick-jumper input{
+  background: transparent !important;
+  color: white !important;
 }
